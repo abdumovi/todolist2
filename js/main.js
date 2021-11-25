@@ -70,18 +70,18 @@ function coms(e){
     }
   }
 }
-elIncom.addEventListener('click',incom);
-function incom(e){
-  let item = obj;
-  for(let i = 0; i < item.length; i++){
+// elIncom.addEventListener('click',incom);
+// function incom(e){
+//   let item = obj;
+//   for(let i = 0; i < item.length; i++){
 
-    if(item[i].classList.length == 3){
-      item[i].style.display = "flex";
-    }else{
-      item[i].style.display = "none";
-    }
-  }
-}
+//     if(item[i].classList.length == 3){
+//       item[i].style.display = "flex";
+//     }else{
+//       item[i].style.display = "none";
+//     }
+//   }
+// }
 elAll.addEventListener('click',elalls);
 function elalls(e){
   let item = obj;
