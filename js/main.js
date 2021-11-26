@@ -64,24 +64,25 @@ function coms(e){
   let item = obj;
   for(let i = 0; i < item.length; i++){
     if(item[i].classList[1] == ['xs2']){
-      item[i].classList.remove('new');
+      
       item[i].style.display = "none";
       console.log(item[i].classList);
     }
   }
 }
-// elIncom.addEventListener('click',incom);
-// function incom(e){
-//   let item = obj;
-//   for(let i = 0; i < item.length; i++){
-
-//     if(item[i].classList.length == 3){
-//       item[i].style.display = "flex";
-//     }else{
-//       item[i].style.display = "none";
-//     }
-//   }
-// }
+elIncom.addEventListener('click',incom);
+function incom(e){
+  let item = obj;
+  for(let i = 0; i < item.length; i++){
+    if(item[i].classList.length == 3){
+      item[i].document.createAttribute("data").value = "new";
+      item[i].style.display = "flex";
+      console.log(item[i]);
+    }else{
+      item[i].style.display = "none";
+    }
+  }
+}
 elAll.addEventListener('click',elalls);
 function elalls(e){
   let item = obj;
