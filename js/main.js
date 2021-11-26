@@ -8,7 +8,16 @@ let elSumbit = document.querySelector('#sumbit');
 let elAll = document.querySelector('#all');
 let elCom = document.querySelector('#com');
 let elIncom = document.querySelector('#incom');
+let elbtns = document.querySelectorAll('.btn');
 
+for(let i = 0; i < elbtns.length; i++){
+  elbtns[i].addEventListener('click',function(){
+    for(let j = 0; j < elbtns.length; j++){
+      elbtns[j].classList.remove('active');
+    }
+    elbtns[i].classList.add('active');
+  });
+}
 
 elForm.addEventListener('submit', itemadd);
 elList.addEventListener('click',elcoms);

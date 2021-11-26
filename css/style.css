@@ -87,6 +87,18 @@ p{
   cursor: pointer;
   transition: all .4s;
 }
+.btnss{
+  padding: 20px;
+  min-width: 90px;
+  border-radius: 30px;
+  background-color: #fff;
+  border: 1px solid #54a882;
+  cursor: pointer;
+  transition: all .4s;
+}
+.btnss:hover{
+  background-color: #68C99E;
+}
 .btn:hover{
   background-color: #68C99E;
 }
@@ -119,4 +131,8 @@ p{
 }
 .xs2{
   background-color: #428366;
+}
+.active{
+  background-color: #54a882;
+  color: #fff;
 }
