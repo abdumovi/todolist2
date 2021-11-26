@@ -14,7 +14,7 @@ elForm.addEventListener('submit', itemadd);
 elList.addEventListener('click',elcoms);
 elList.addEventListener('click',colors);
 elIncom.addEventListener('click',incom);
-
+let alllist = [];
 function itemadd(e) {
   e.preventDefault();
   let elInput = document.querySelector('.input').value;
@@ -34,12 +34,13 @@ function itemadd(e) {
     li.className = 'form__item';
     li.appendChild(textspan);
     li.appendChild(iconspan);
-
+    alllist[alllist.length] = li;
     elList.appendChild(li);
     elInput = document.querySelector('.input').value = "";
     
   }
 }
+
 function elcoms(e){
   if(e.target.classList.contains('xs')){
     let li = e.target.parentElement;
@@ -55,37 +56,42 @@ function colors(e){
     function toggle(el) {
       obj[obj.length] = el.target;
       this.classList.toggle("xs2");
-      
+      el.target.classList.toggle('new');
     }
   }
 }
 elCom.addEventListener('click',coms);
 function coms(e){
   let item = obj;
+  for(let i = 0; i < alllist.length; i++){
+    alllist[i].style.display = "flex";
+  }
   for(let i = 0; i < item.length; i++){
-    if(item[i].classList[1] == ['xs2']){
-      
+    if(item[i].classList[1] == 'xs2'){
       item[i].style.display = "none";
-      console.log(item[i].classList);
     }
   }
 }
 elIncom.addEventListener('click',incom);
 function incom(e){
   let item = obj;
+  for(let i = 0; i < alllist.length; i++){
+    alllist[i].style.display = "none";
+  }
   for(let i = 0; i < item.length; i++){
-    if(item[i].classList.length == 3){
-      item[i].document.createAttribute("data").value = "new";
+  
+    if(item[i].classList[2] == 'new'){
       item[i].style.display = "flex";
-      console.log(item[i]);
-    }else{
-      item[i].style.display = "none";
+      
     }
   }
 }
 elAll.addEventListener('click',elalls);
 function elalls(e){
   let item = obj;
+  for(let i = 0; i < alllist.length; i++){
+    alllist[i].style.display = "flex";
+  }
   for(let i = 0; i < item.length; i++){
     item[i].style.display = "flex";
     
